@@ -4,11 +4,11 @@ import React, { FC, useState, useEffect } from 'react'
 import Search from "./Search";
 
 interface MainProps{
-    inputValue: any;
+    breeds: any;
     setInputValue: any;
 }
 
-const Main: FC <MainProps> = ({ inputValue, setInputValue }) => {
+const Main: FC <MainProps> = ({ breeds, setInputValue }) => {
     
     return (
         <div className="main">
@@ -18,9 +18,9 @@ const Main: FC <MainProps> = ({ inputValue, setInputValue }) => {
                         <Link style={{textDecoration:"none"}} to="/" >Home</Link>
                     </li>
                 </ul>
-                <Search inputValue={inputValue} setInputValue={setInputValue} />
+                <Search setInputValue={setInputValue} />
+                <h2 id="bredds">{breeds}</h2>
             </nav>
-            
             <Outlet />
 
         </div>

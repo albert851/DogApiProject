@@ -1,18 +1,19 @@
+import React, { FC, useState } from "react";
+import Main from "../components/Main";
+import { useParams, useLocation } from "react-router-dom";
+import BreedCard from "./../components/BreedCard";
 
-import React from 'react'
-import Main from '../components/Main'
-import {useParams} from "react-router-dom"
-import BreedCard from './../components/BreedCard';
+interface BreedPageProps {
+  setBreeds: any;
+}
 
-function BreedPage() {
-  const {breed} = useParams()
-  if(!breed) console.log("NO BREED");
+const BreedPage: FC<BreedPageProps> = ({ setBreeds }) => {
+  const { breed } = useParams();
+  if (!breed) console.log("NO BREED");
 
-  return (
-    <div className='breed'>
-      {<BreedCard src={breed}/>}
-    </div>
-  )
+  setBreeds("Breed")
+
+  return <div className="breed">{<BreedCard src={breed} />}</div>;
 }
 
 export default BreedPage;

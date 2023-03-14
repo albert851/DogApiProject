@@ -3,11 +3,10 @@ import React, { FC, useState } from 'react'
 import axios from 'axios';
 
 interface SearchProps{
-  inputValue: any;
   setInputValue: any;
 }
 
-const Search: FC <SearchProps> = ({ inputValue, setInputValue }) => {
+const Search: FC <SearchProps> = ({ setInputValue }) => {
 
   const handleSearch = (ev:any) => {
 
