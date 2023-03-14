@@ -15,7 +15,7 @@ const Main: FC <MainProps> = ({ inputValue, setInputValue }) => {
             <nav>
                 <ul>
                     <li>
-                        <Link style={{textDecoration:"none"}} to={`/${inputValue}`}>Home</Link>
+                        <Link style={{textDecoration:"none"}} to="/" >Home</Link>
                     </li>
                 </ul>
                 <Search inputValue={inputValue} setInputValue={setInputValue} />
