@@ -18,12 +18,10 @@ const DogBreeds: FC<DogBreedsProps> = ({ breeds }) => {
         setDogArray(breedArray);
       } else {
         const { data } = await axios.get(`https://dog.ceo/api/breeds/list/all`);
-        let breedArray: string[] = Object.keys(data.message);
+        const breedArray: string[] = Object.keys(data.message);
         const regex = new RegExp(`${breed}`);
         const re = regex.exec.bind(regex);
-
         const newArr = breedArray.filter(re);
-
         setDogArray(newArr);
       }
     } catch (error) {

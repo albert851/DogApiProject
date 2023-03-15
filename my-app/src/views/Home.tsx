@@ -10,8 +10,7 @@ interface HomeProps {
 }
 
 const Home: FC<HomeProps> = ({ inputValue, setBreeds }) => {
-  
-  setBreeds("Breeds")
+  setBreeds("Breeds");
 
   return (
     <div className="home">
